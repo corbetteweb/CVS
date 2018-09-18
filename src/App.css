@@ -1,0 +1,18 @@
+	.icon-alert {
+		display: inline-block;
+		position: relative;
+		top: 3px;
+		width: 17px;
+		height: 17px;
+		background-image: url(images/svgs/Messaging-warning-circle-warning-circle--s.svg);
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		margin: 0 5px 0 0;
+	}
+
+	@media (max-width:766px) {
+		.bg-dark-sm {
+			background-color: #CC0000 !important;
+		}		
+	}

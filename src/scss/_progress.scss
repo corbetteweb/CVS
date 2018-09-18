@@ -1,0 +1,61 @@
+@keyframes progress-bar-stripes {
+  from { background-position: $progress-height 0; }
+  to { background-position: 0 0; }
+}
+
+.progress {
+  display: flex;
+  width: 159px; 
+  height: $progress-height;
+  overflow: hidden; // force rounded corners by cropping it
+  font-size: $progress-font-size;
+  background-color: $progress-bg;
+  margin: 0 auto; 
+  overflow: hidden; 
+	
+  @include border-radius($progress-border-radius);
+  @include box-shadow($progress-box-shadow);
+}
+
+.progress-container {
+	overflow: hidden; 
+	height: 94px;
+	width: 159px; 
+	margin: 0 auto;
+}
+
+.progress-dollars {
+	max-width: 280px;
+	margin: 0 auto;
+}
+
+.progress-bar-shaper {
+	background-color:white;
+	display:inline-block;
+	position:relative;
+	top:-77px;
+	left:0px;
+	height:85px;
+	width:129px;
+  @include border-radius($progress-border-radius);
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $progress-bar-color;
+  text-align: center;
+  white-space: nowrap;
+  background-color: $progress-bar-bg;
+  @include transition($progress-bar-transition);
+}
+
+.progress-bar-striped {
+  @include gradient-striped();
+  background-size: $progress-height $progress-height;
+}
+
+.progress-bar-animated {
+  animation: progress-bar-stripes $progress-bar-animation-timing;
+}

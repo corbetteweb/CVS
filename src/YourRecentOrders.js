@@ -15,9 +15,12 @@ class YourRecentOrders extends Component {
 					<div className="col">
 						<a href="" className="list-group-item-info"><h5><ins className="order-id">Order #{orders[index].orderNumber}</ins></h5></a>
 					</div>
-					<div className="col-lg-5">Placed on {orders[index].date} for {orders[index].patient}</div>
-					<div className="col">{orders[index].quantity} Rxs</div>
-					<div className="col"><span className={orders[index].statusType}>{orders[index].status}</span></div>
+					<div className="col-md-5 d-none d-md-block">Placed on {orders[index].date} for {orders[index].patient}</div>
+					<div className="col text-center d-none d-md-block">{orders[index].quantity} Rxs</div>
+					<div className="col text-right"><span className={orders[index].statusType}>{orders[index].status}</span></div>
+					
+					<div className="col-10 d-sm-block d-md-none">Placed on {orders[index].date} for {orders[index].patient}</div>
+					<div className="col-2 pl-0 text-right d-sm-block d-md-none">{orders[index].quantity} Rxs</div>					
 				  </div>
 				)
 			})}

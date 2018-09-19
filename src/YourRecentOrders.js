@@ -11,7 +11,7 @@ class YourRecentOrders extends Component {
 		  <section className="card-body pt-0 pb-0">
 			{orders.map((orderDetail, index) => {
 				return(
-				  <div className="row pt-1" key={orders[index].id}>
+				  <div className="row pt-2" key={orders[index].id}>
 					<div className="col">
 						<a href="" className="list-group-item-info"><h5><ins className="order-id">Order #{orders[index].orderNumber}</ins></h5></a>
 					</div>
